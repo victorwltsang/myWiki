@@ -1,0 +1,329 @@
+    * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /*border:1px solid blue;*/
+    }
+
+    html,
+    body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    }
+
+    header {
+    padding: 20px;
+    font-size: 13px;
+    }
+
+    header ul li {
+    margin: 0 .60em;
+    }
+
+    header a {
+    color: #333;
+    }
+
+    .wiki{
+      flex-direction: column;
+      color:black;
+      margin: 5vh auto 2vh auto;
+    }
+    .wiki li{
+      width:50vw;
+    }
+
+  .wiki strong{
+    color:#005A9C;
+  }
+    .topBar{
+    height: 4.2vh;
+    width: 25vw;
+    }
+    .img-fluid{
+      height: 2.5vh;
+       width:auto;
+       vertical-align: middle;
+       padding-right: 1vw;
+    }
+
+    .topSearch{
+      margin-right:auto;
+      display:none;
+    }
+    .sign {
+    padding: 7px 10px;
+    color: white;
+    background-color: #4285f4;
+    border: 1px solid #4285f4;
+    border-radius: 2px;
+    font-weight: bold;
+    }
+
+    .main {
+    color: white;
+    }
+
+    .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+
+    .row {
+    display: flex;
+    flex-direction: row;
+    }
+
+    .col {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .google {
+    text-align: center;
+    }
+
+    .bar {
+    width: 75vw;
+    height: 4vh;
+    }
+
+
+
+    .main {
+    flex: 1;
+    padding: 40px;
+    }
+
+    .footer {
+    color: #666;
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    line-height: 15px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    padding: .9rem;
+    }
+
+    a {
+    color: #666;
+    text-decoration: none;
+    }
+
+    a:hover {
+    text-decoration: underline;
+    }
+
+    .vcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    }
+
+    .right,
+    .left {
+    flex: 1;
+    }
+
+
+    /* div,nav{
+    border:1px solid red;
+    } */
+
+    ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    }
+
+    .footer ul li {
+    margin: 0 1em;
+    }
+
+    .right ul {
+    align-items: center;
+    justify-content: flex-end;
+    }
+
+    .left ul {
+    align-items: center;
+    justify-content: flex-start;
+    }
+
+    input {
+    border: 1px solid #d9d9d9;
+    background: url("https://s31.postimg.org/gpu8ukdiz/voice.png") no-repeat;
+    background-size: contain;
+    background-position: 99% 50%;
+    padding-left:10px;
+    }
+
+    input:hover {
+    border: 1px solid #b9b9b9;
+    }
+
+    .bar {
+    width: 100%;
+    display: block;
+    }
+
+    .google {
+    margin-bottom: 3vh;
+    }
+
+    .center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .btn {
+    margin: 2vh .5vw;
+    padding: 10px;
+    color: #757575;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    font-weight: bold;
+    }
+
+    .lucky{
+      font-size:80%;
+
+    }
+
+    .lucky:hover{
+      border: 1px solid #b9b9b9;
+      color: #222;
+
+    }
+    .noU{
+        text-decoration: none !important;
+    }
+
+    .main button:hover {
+    border: 1px solid #b9b9b9;
+    color: #222;
+    }
+
+    img {
+    max-width: 100%;
+    }
+
+    .second{
+    display:none;
+    }
+
+    /* Add this attribute to the element that needs a tooltip */
+    [data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    }
+
+    /* Hide the tooltip content by default */
+    [data-tooltip]:before,
+    [data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+    }
+
+    /* Position tooltip above the element */
+    [data-tooltip]:before {
+    position: absolute;
+    top: 235%;
+    right: -200%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 25px;
+    width: 360px;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    color: black;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+
+    /* Triangle hack to make tooltip look like a speech bubble */
+    [data-tooltip]:after {
+    position: absolute;
+    top: 150%;
+    left: 20%;
+    margin-left: -5px;
+    width: 0;
+
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid #f2f2f2;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    }
+
+    /* Show tooltip content on hover */
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    }
+
+
+
+
+    /* Media Query */
+
+    @media screen and (max-width: 452px) {
+    .footer {
+    flex-wrap: wrap;
+    }
+    .bar{
+    height:50px;
+    }
+    .right {
+    flex: 1;
+    order: -1;
+    }
+    .left {
+    flex: 1;
+    }
+    .right ul {
+    align-items: center;
+    justify-content: center
+    }
+    .footer .right ul li:nth-child(3) {
+    order: -1;
+    }
+    .left ul {
+    align-items: center;
+    justify-content: center;
+    }
+    [data-tooltip]:before {
+    position: absolute;
+    top: 235%;
+    right: -350%;
+    font-size:17px;
+    width:200px;
+    padding:26px;
+    height:auto;
+    box-sizing:border-box;
+    }
+    }
+
+    @media screen and (max-width: 334px) {
+    .footer {
+    display: none;
+    }
+    .btn:nth-child(2) {
+    display: none;
+    }
+    }
